@@ -1,39 +1,32 @@
-# Sc.Framework.Lucene 
+# Framework.Utilities.Service 
 
 ## Introduction
-The purpose of Sc.Framework.Lucene is to create a more generic search function for Sitecore projects.
+The purpose of Framework.Utilities.Service is for calling external web services.
 
 
 ## How to install
 
-To install [Sc.Framework.Lucence](https://www.nuget.org/packages/Sc.Framework.Lucene/), run the following command in the Package Manager Console .
+To install [Framework.Utilities.Service](https://www.nuget.org/packages/Framework.Utilities.Services/), run the following command in the Package Manager Console .
 
-Install-Package Sc.Framework.Lucene 
+Install-Package Framework.Utilities.Service 
  
 
 ## How to use
-1. Create resultItem by inheriting from SearchResultItem
-    ```
-        public class EventsResultItem : SearchResultItem
-        {
-            [IndexField("Title")]
-            public string Title { get; set; }
-        }
-    ```
+There are two main methods. 
 
-2. Create search interface and inherits from IBeaseSearchService
-    ```  
-        public interface IEventsSearchService : IBaseSearchService<EventsResultItem>
-        {
-            //custom functions
-        }
-    ```
+### GetAuthenticateToken
 
-3. Create service service 
 
-    ```
-         public class ClaimSearchService : BaseSearchService<EventsResultItem>, IEventsSearchService
-        {
-            public override ISearchIndex Index => ContentSearchManager.GetIndex(Settings.GetSetting("EventsIndexName"));
-        }
-    ```
+1. Define your own AuthenticationToken model.
+2. Call GetAuthenticateToken method by passing RequestMethod, ContentType, requestUri as well as requestBody if it is required. 
+
+Example code:
+ var token = MakeRequestsService.GetAuthenticateToken<AuthenticationToken>(RequestMethod.Post, RequestConstants.ContentType.Text, requestUri, requestBody);
+
+### Get
+
+1. Define your own response model i.e. Underwriting.
+2. Call Get method by passing ContentType, requestUri as well as access token.
+
+Example code:
+var response  = MakeRequestsService.Get<List<Underwriting>>(RequestConstants.ContentType.Text, requestUri, token.AccessToken);
