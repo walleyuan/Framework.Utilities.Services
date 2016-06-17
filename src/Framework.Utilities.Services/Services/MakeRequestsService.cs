@@ -7,12 +7,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Framework.Utilities.Services
+namespace Framework.Utilities.Services.Services
 {
     using System.IO;
     using System.Net;
     using System.Text;
+
     using Framework.Utilities.Services.Enums;
+
     using Newtonsoft.Json;
 
     /// <summary>

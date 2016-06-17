@@ -84,8 +84,9 @@
   <ItemGroup>
     <Compile Include="Constants\RequestConstants.cs" />
     <Compile Include="Enums\RequestMethod.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MakeRequestsService.cs" />
+    <Compile Include="Services\MakeRequestsService.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

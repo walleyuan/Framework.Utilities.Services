@@ -13,6 +13,7 @@ namespace Framework.Utilities.Services.UnitTest
 
     using Framework.Utilities.Services.Constants;
     using Framework.Utilities.Services.Enums;
+    using Framework.Utilities.Services.Services;
 
     using NUnit.Framework;
 
