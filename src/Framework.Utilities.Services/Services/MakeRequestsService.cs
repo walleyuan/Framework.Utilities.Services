@@ -12,8 +12,9 @@ namespace Framework.Utilities.Services.Services
     using System.IO;
     using System.Net;
     using System.Text;
+    using System.Threading.Tasks;
 
-    using Framework.Utilities.Services.Enums;
+    using Enums;
 
     using Newtonsoft.Json;
 
@@ -28,17 +29,15 @@ namespace Framework.Utilities.Services.Services
         /// <param name="method">
         /// The method.
         /// </param>
-        /// <param name="requestTokenUri">
-        /// The request token uri.
-        /// </param>
         /// <param name="contentType">
         /// The content type.
+        /// </param>
+        /// <param name="requestTokenUri">
+        /// The request token uri.
         /// </param>
         /// <param name="postData">
         /// The body.
         /// </param>
-        /// <typeparam name="T">
-        /// </typeparam>
         /// <returns>
         /// The <see cref="T"/>.
         /// </returns>
@@ -98,6 +97,7 @@ namespace Framework.Utilities.Services.Services
             return default(T);
         }
 
+
         /// <summary>
         /// The make request.
         /// </summary>
@@ -151,6 +151,50 @@ namespace Framework.Utilities.Services.Services
             catch (WebException ex)
             {
                 return (HttpWebResponse)ex.Response;
+            }
+        }
+
+        /// <summary>
+        /// The make async request.
+        /// </summary>
+        /// <param name="contentType">
+        /// The content type.
+        /// </param>
+        /// <param name="url">
+        /// The url.
+        /// </param>
+        /// <param name="token">
+        /// The token.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Task"/>.
+        /// </returns>
+        public static async Task<T> MakeAsyncRequest<T>(string contentType, string url, string token = "")
+        {
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.ContentType = contentType;
+            request.Method = WebRequestMethods.Http.Get;
+            request.Timeout = 60000;
+            request.Proxy = null;
+
+            if (!string.IsNullOrEmpty(token))
+            {
+                request.Headers[HttpRequestHeader.Authorization] = $"Bearer {token}";
+            }
+
+            Task<WebResponse> getResponseTask = request.GetResponseAsync();
+
+            WebResponse response = await getResponseTask;
+
+            using (Stream stream = response.GetResponseStream())
+            {
+                StreamReader readStream = new StreamReader(stream, Encoding.UTF8);
+
+                var responseText = readStream.ReadToEnd();
+
+                var obj = JsonConvert.DeserializeObject<T>(responseText);
+
+                return obj;
             }
         }
     }

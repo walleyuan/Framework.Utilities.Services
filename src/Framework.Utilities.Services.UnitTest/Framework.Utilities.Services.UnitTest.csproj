@@ -54,10 +54,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="AuthenticationToken.cs" />
-    <Compile Include="TestMakeRequestsService.cs" />
+    <Compile Include="Models\AuthenticationToken.cs" />
+    <Compile Include="UnitTests\TestMakeRequestsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Underwriting.cs" />
+    <Compile Include="Models\Underwriting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

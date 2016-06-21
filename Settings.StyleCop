@@ -10,6 +10,7 @@
 	  <Value>nav</Value>
 	  <Value>uCommerce</Value>
 	  <Value>ui</Value>
+	  <Value>json</Value>
 	  <Value>autofac</Value>
     </CollectionProperty>
   </GlobalSettings>

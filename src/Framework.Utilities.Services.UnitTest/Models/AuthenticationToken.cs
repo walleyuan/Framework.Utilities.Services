@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Framework.Utilities.Services.UnitTest
+namespace Framework.Utilities.Services.UnitTest.Models
 {
     using Newtonsoft.Json;
 
