@@ -45,7 +45,8 @@ namespace Framework.Utilities.Services.UnitTest.UnitTests
         /// <param name="requestUri">
         /// The request uri.
         /// </param>
-        [TestCase("http://hlra_uw.axegroup.biz/UWworkflow.WebAPI/api/v1/groupapplications/search?page=1&perpage=15&sort=LastActionDate%20desc&keyword=2&fund=GL4203")]
+        [TestCase("http://hlra_uw.axegroup.biz/UWworkflow.WebAPI/api/v1/groupapplications?page=1&perpage=1&sort=LastActionDate%20desc&status=Blank")]
+        
         public void TestMakeRequest(string requestUri)
         {
             string tokenUri = "http://hlra_uw.axegroup.biz/UWworkflow.WebAPI/Token";
@@ -57,6 +58,20 @@ namespace Framework.Utilities.Services.UnitTest.UnitTests
             var response  = MakeRequestsService.Get<List<Underwriting>>(RequestConstants.ContentType.Text, requestUri, token.AccessToken);
 
             Assert.IsTrue(response.Count > 0);
+        }
+
+        [TestCase("http://hlra_uw.axegroup.biz/UWworkflow.WebAPI/api/v1/groupapplications/697")]
+        public void TestMakeRequestForGroupApplicatoin(string requestUri)
+        {
+            string tokenUri = "http://hlra_uw.axegroup.biz/UWworkflow.WebAPI/Token";
+
+            string tokenBody = "grant_type=password&username=cues@hlra.com.au&password=Hlra1234!";
+
+            var token = MakeRequestsService.GetAuthenticateToken<AuthenticationToken>(RequestMethod.Post, RequestConstants.ContentType.Text, tokenUri, tokenBody);
+
+            var response = MakeRequestsService.Get<UnderwritingResponse>(RequestConstants.ContentType.Text, requestUri, token.AccessToken);
+
+            Assert.IsTrue(response != null);
         }
 
         /// <summary>

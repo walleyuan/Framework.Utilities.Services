@@ -55,6 +55,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Models\AuthenticationToken.cs" />
+    <Compile Include="Models\UnderwritingResponse.cs" />
     <Compile Include="UnitTests\TestEmailService.cs" />
     <Compile Include="UnitTests\TestMakeRequestsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
