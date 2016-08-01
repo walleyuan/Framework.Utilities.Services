@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>SOPA</id>
+    <version>1.0.7</version>
+    <authors>ZHEN YUAN</authors>
+    <owners>ZHEN YUAN</owners>
+    <licenseUrl>http://zhenyuan.azurewebsites.net/</licenseUrl>
+    <projectUrl>http://zhenyuan.azurewebsites.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generate nuget pakcage</description>
+    <tags>Sitecore</tags>
+    <dependencies>
+       <dependency id="Newtonsoft.Json" version="8.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="..\src\Framework.Utilities.Services\bin\**\Framework.Utilities.Services.dll" target="Lib" />
+  </files>
+</package>
