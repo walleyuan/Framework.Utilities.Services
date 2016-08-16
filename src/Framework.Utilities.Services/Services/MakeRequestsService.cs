@@ -97,6 +97,17 @@ namespace Framework.Utilities.Services.Services
             return default(T);
         }
 
+        /// <summary>
+        /// Get make request
+        /// </summary>
+        /// <param name="contentType">content type</param>
+        /// <param name="requestTokenUri">request token uri</param>
+        /// <param name="token">token</param>
+        /// <returns>HttpWebResponse</returns>
+        public static HttpWebResponse Get(string contentType, string requestTokenUri, string token)
+        {
+           return MakeRequest(RequestMethod.Get, contentType, requestTokenUri, token: token);
+        }
 
         /// <summary>
         /// The make request.
@@ -145,7 +156,7 @@ namespace Framework.Utilities.Services.Services
                 }
 
                 var response = (HttpWebResponse)request.GetResponse();
-
+                
                 return response;
             }
             catch (WebException ex)
