@@ -83,13 +83,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\RequestConstants.cs" />
+    <Compile Include="Enums\Months.cs" />
+    <Compile Include="Enums\RecurrenceTypes.cs" />
     <Compile Include="Enums\RequestMethod.cs" />
+    <Compile Include="Enums\Weekdays.cs" />
+    <Compile Include="Enums\WeekdaySequences.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Interfaces\IRecurrenceService.cs" />
     <Compile Include="Models\EmailMessage.cs" />
+    <Compile Include="Models\RecurrenceDailyModel.cs" />
+    <Compile Include="Models\RecurrenceMonthlyModel.cs" />
+    <Compile Include="Models\RecurrenceRange.cs" />
+    <Compile Include="Models\RecurrenceWeeklyModel.cs" />
+    <Compile Include="Models\RecurrenceYearlyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\EmailToken.cs" />
     <Compile Include="Services\MakeRequestsService.cs" />
+    <Compile Include="Services\RecurrenceService.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

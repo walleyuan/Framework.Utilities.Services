@@ -26,21 +26,11 @@ namespace Framework.Utilities.Services.Services
         /// <summary>
         /// The get authenticate token.
         /// </summary>
-        /// <param name="method">
-        /// The method.
-        /// </param>
-        /// <param name="contentType">
-        /// The content type.
-        /// </param>
-        /// <param name="requestTokenUri">
-        /// The request token uri.
-        /// </param>
-        /// <param name="postData">
-        /// The body.
-        /// </param>
-        /// <returns>
-        /// The <see cref="T"/>.
-        /// </returns>
+        /// <param name="method"> The method. </param>
+        /// <param name="contentType"> The content type. </param>
+        /// <param name="requestTokenUri"> The request token uri. </param>
+        /// <param name="postData"> The body. </param>
+        /// <returns> The <see cref="T"/>. </returns>
         public static T GetAuthenticateToken<T>(RequestMethod method, string contentType, string requestTokenUri, string postData)
         {
             var response = MakeRequest(method, contentType, requestTokenUri, postData);
@@ -63,21 +53,11 @@ namespace Framework.Utilities.Services.Services
         /// <summary>
         /// The get.
         /// </summary>
-        /// <param name="contentType">
-        /// The content type.
-        /// </param>
-        /// <param name="requestTokenUri">
-        /// The request token uri.
-        /// </param>
-        /// <param name="token">
-        /// The token.
-        /// </param>
-        /// <typeparam name="T">
-        /// Response type.
-        /// </typeparam>
-        /// <returns>
-        /// Given type of object.
-        /// </returns>
+        /// <param name="contentType"> The content type. </param>
+        /// <param name="requestTokenUri"> The request token uri. </param>
+        /// <param name="token"> The token. </param>
+        /// <typeparam name="T"> Response type. </typeparam>
+        /// <returns> Given type of object. </returns>
         public static T Get<T>(string contentType, string requestTokenUri, string token)
         {
             var response = MakeRequest(RequestMethod.Get, contentType, requestTokenUri, token: token);
