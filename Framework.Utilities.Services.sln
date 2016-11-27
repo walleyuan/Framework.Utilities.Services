@@ -21,6 +21,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".version", ".version", "{A941D16B-230A-473C-9A8B-6605BF140821}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{A9521F88-152D-486F-A6C5-D41C1C8B6469}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\Framework.Utilities.Services.nuspec = nuget\Framework.Utilities.Services.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

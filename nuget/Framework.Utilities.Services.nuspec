@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>Framework.Utilities.Services</id>
-    <version>1.0.8</version>
+    <version>1.0.12</version>
     <authors>ZHEN YUAN</authors>
     <owners>ZHEN YUAN</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
