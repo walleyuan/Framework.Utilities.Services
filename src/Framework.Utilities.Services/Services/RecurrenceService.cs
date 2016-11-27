@@ -17,7 +17,6 @@ namespace Framework.Utilities.Services.Services
     using Framework.Utilities.Services.Enums;
     using Framework.Utilities.Services.Interfaces;
     using Framework.Utilities.Services.Models;
-    using SOPA.Framework.Models;
 
     /// <summary>
     /// The recurrence service.

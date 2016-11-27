@@ -9,8 +9,6 @@
 
 namespace Framework.Utilities.Services.Models
 {
-    using SOPA.Framework.Models;
-
     /// <summary>
     /// The recurrence model.
     /// </summary>

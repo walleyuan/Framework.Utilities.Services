@@ -16,9 +16,7 @@ namespace Framework.Utilities.Services.UnitTest.UnitTests
     using Framework.Utilities.Services.Models;
     using Framework.Utilities.Services.Services;
     using Framework.Utilities.Services.UnitTest.Models;
-
     using NUnit.Framework;
-    using SOPA.Framework.Models;
 
     /// <summary>
     /// The recurrence service unit tests.

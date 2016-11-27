@@ -13,7 +13,6 @@ namespace Framework.Utilities.Services.UnitTest.Models
     using System.Collections.Generic;
     using Framework.Utilities.Services.Enums;
     using Framework.Utilities.Services.Models;
-    using SOPA.Framework.Models;
 
     /// <summary>
     /// The recurrence daily models.

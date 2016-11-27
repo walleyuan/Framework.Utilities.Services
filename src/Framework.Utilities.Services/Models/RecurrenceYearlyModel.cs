@@ -13,8 +13,6 @@ namespace Framework.Utilities.Services.Models
 
     using global::Framework.Utilities.Services.Enums;
 
-    using SOPA.Framework.Models;
-
     /// <summary>
     /// The recurrence yearly model.
     /// </summary>

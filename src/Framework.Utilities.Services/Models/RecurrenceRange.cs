@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace SOPA.Framework.Models
+namespace Framework.Utilities.Services.Models
 {
     using System;
 

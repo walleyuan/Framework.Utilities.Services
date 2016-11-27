@@ -11,9 +11,7 @@
 
 namespace Framework.Utilities.Services.Models
 {
-    using global::Framework.Utilities.Services.Enums;
-
-    using SOPA.Framework.Models;
+    using Framework.Utilities.Services.Enums;
 
     /// <summary>
     /// The recurrence monthly model.

@@ -13,7 +13,6 @@ namespace Framework.Utilities.Services.Interfaces
 {
     using System;
     using Framework.Utilities.Services.Models;
-    using SOPA.Framework.Models;
 
     /// <summary>
     /// The IRecurrence service.

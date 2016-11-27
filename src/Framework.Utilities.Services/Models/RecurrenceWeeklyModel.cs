@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="RecurrenceWeeklyModel.cs" company="Gruden">
-//   Copyright (c) Gruden. All rights reserved.
+// <copyright file="RecurrenceWeeklyModel.cs" company="ZHEN YUAN">
+//   Copyright (c) ZHEN All rights reserved.
 // </copyright>
 // <summary>
 //   Defines the RecurrenceWeeklyModel type.
@@ -9,7 +9,7 @@
 
 
 
-namespace SOPA.Framework.Models
+namespace Framework.Utilities.Services.Models
 {
     /// <summary>
     /// The recurrence weekly model.
