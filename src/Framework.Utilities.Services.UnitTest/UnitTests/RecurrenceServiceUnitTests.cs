@@ -118,6 +118,7 @@ namespace Framework.Utilities.Services.UnitTest.UnitTests
         [TestCase("30/11/2016", 3, ExpectedResult = false)]
         [TestCase("01/12/2016", 3, ExpectedResult = true)]
         [TestCase("02/12/2016", 3, ExpectedResult = false)]
+        [TestCase("02/12/2017", 3, ExpectedResult = false)]
         public bool TestCheckAvailabilityForDailyEvents(string currentDate, int frequency)
         {
             var service = new RecurrenceService();

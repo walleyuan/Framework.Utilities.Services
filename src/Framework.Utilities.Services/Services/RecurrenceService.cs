@@ -57,9 +57,10 @@ namespace Framework.Utilities.Services.Services
                 {
                     return false;
                 }
+                return true;
             }
 
-            return true;
+            return false;
         }
 
         /// <summary>
